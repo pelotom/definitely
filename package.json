@@ -1,0 +1,26 @@
+{
+  "name": "definitely",
+  "version": "1.0.0",
+  "description": "Disallow undefined property access in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelotom/definitely.git"
+  },
+  "keywords": [
+    "javascript",
+    "object",
+    "property",
+    "undefined",
+    "proxy"
+  ],
+  "author": "Tom Crockett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pelotom/definitely/issues"
+  },
+  "homepage": "https://github.com/pelotom/definitely#readme"
+}
