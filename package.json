@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pelotom/definitely#readme",
   "devDependencies": {
-    "babel": "^6.5.2",
+    "babel-cli": "6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "chai": "^3.5.0",
     "harmony-proxy": "^1.0.1",
