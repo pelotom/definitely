@@ -1,4 +1,4 @@
-export default obj => new Proxy(obj, {
+export default obj => typeof Proxy === 'undefined' ? obj : new Proxy(obj, {
   get(target, key) {
     if (!(key in target)) {
       const err = new Error(`attempted to access nonexistent property \`${key}\``)
