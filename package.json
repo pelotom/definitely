@@ -4,7 +4,7 @@
   "description": "Disallow undefined property access in JavaScript",
   "main": "definitely.js",
   "scripts": {
-    "build": "babel --minified -s -o definitely.js src/definitely.js",
+    "build": "babel --minified -o definitely.js src/definitely.js",
     "test": "mocha --harmony-proxies --reporter progress --compilers js:babel-core/register src/*.test.js",
     "test:watch": "npm run test -- --watch",
     "release": "xyz",
