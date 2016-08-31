@@ -1,6 +1,6 @@
 {
   "name": "definitely",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Disallow undefined property access in JavaScript",
   "main": "definitely.js",
   "scripts": {
