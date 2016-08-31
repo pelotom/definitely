@@ -5,7 +5,8 @@
   "main": "definitely.js",
   "scripts": {
     "build": "babel --minified -s -o definitely.js src/definitely.js",
-    "test": "mocha --harmony-proxies --reporter progress --compilers js:babel-core/register src/*.test.js"
+    "test": "mocha --harmony-proxies --reporter progress --compilers js:babel-core/register src/*.test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
