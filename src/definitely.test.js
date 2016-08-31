@@ -34,6 +34,11 @@ describe('definitely', () => {
       expect(removeColumn(err.stack)).to.equal(removeColumn(expectedErr.stack))
     }
   })
+
+  it('allows invalid properties that are whitelisted', () => {
+    const key = 'blip'
+    expect(definitely(obj, { whitelist: [key] })[key]).to.equal(undefined)
+  })
 })
 
 describe('definitely without Proxy', () => {
