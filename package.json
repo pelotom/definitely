@@ -2,16 +2,16 @@
   "name": "definitely",
   "version": "1.0.0",
   "description": "Disallow undefined property access in JavaScript",
-  "main": "index.js",
+  "main": "definitely.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel --minified -s -o definitely.js src/definitely.js",
+    "test": "mocha --harmony-proxies --reporter progress --compilers js:babel-core/register src/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pelotom/definitely.git"
   },
   "keywords": [
-    "javascript",
     "object",
     "property",
     "undefined",
@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/pelotom/definitely/issues"
   },
-  "homepage": "https://github.com/pelotom/definitely#readme"
+  "homepage": "https://github.com/pelotom/definitely#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "chai": "^3.5.0",
+    "harmony-proxy": "^1.0.1",
+    "mocha": "^3.0.2"
+  }
 }
