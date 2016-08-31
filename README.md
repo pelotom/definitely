@@ -35,3 +35,7 @@ Now you've caught the bug right at the source!
 ### Note
 
 The magic that enables this library is an ES2015 feature called [`Proxy`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), which allows intercepting arbitrary property access attempts and deciding what to do with them (in our case we throw an exception if the underlying object is missing the requisite property). `Proxy` is not yet supported in all browsers (e.g. IE and Safari) and in `Node` requires a special flag (`--harmony-proxies`) and [shim](https://www.npmjs.com/package/harmony-proxy). If `Proxy` is not found in the global scope, this library becomes a no-op.
+
+### See also
+
+[`definitely-loader`](https://github.com/pelotom/definitely-loader), a Webpack loader which verifies that imported names exist within the target module.
