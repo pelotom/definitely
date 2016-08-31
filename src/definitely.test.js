@@ -1,5 +1,6 @@
 import { expect } from 'chai'
 
+import * as messages from './messages'
 import definitely from './definitely'
 
 global.Proxy = require('harmony-proxy')
@@ -21,7 +22,7 @@ describe('definitely', () => {
     const badKey = 'bar'
     let expectedErr
     try {
-      expectedErr = new Error(`Attempted to access nonexistent property ${badKey}`); definitely(obj)[badKey]
+      expectedErr = new Error(messages.nonexistent('bar')); definitely(obj)[badKey]
       throw new Error('did not throw on invalid access')
     } catch (err) {
       const removeColumn = stack => stack.replace(/(definitely\.test\.js:\d+):\d+/, '$1')
