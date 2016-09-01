@@ -1,4 +1,4 @@
-# definitely
+# definitely [![Build Status](https://travis-ci.org/pelotom/definitely.svg?branch=master)](https://travis-ci.org/pelotom/definitely)
 Find `undefined` property bugs close to the source.
 
 ### Installation
