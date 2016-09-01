@@ -16,7 +16,8 @@ export default (
     get(target, key) {
       if (!(key in target || key in whiteset)) {
         const err = new Error(`attempted to access nonexistent property \`${key}\``)
-        err.stack = err.stack.replace(/(\n\s*at[^\n]*){2}/, '')
+        // Remove our stack frames from the trace leaving only client code
+        err.stack = err.stack.replace(/(\n[^\n]*definitely\/src\/definitely\.js[^\n]*)/g, '')
         throw err
       }
       return target[key]

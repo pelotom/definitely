@@ -10,14 +10,6 @@ describe('definitely', () => {
     numbery: 3
   }
 
-  before(() => {
-    global.Proxy = require('harmony-proxy')
-  })
-
-  after(() => {
-    delete global.Proxy
-  })
-
   it('allows valid property access', () => {
     for (const key in obj)
       expect(definitely(obj)[key]).to.equal(obj[key])
@@ -43,6 +35,12 @@ describe('definitely', () => {
 
 describe('definitely without Proxy', () => {
   it('is a noop', () => {
-    expect(definitely({}).meh).to.equal(undefined)
+    const Proxy = global.Proxy
+    delete global.Proxy
+    try {
+      expect(definitely({}).meh).to.equal(undefined)
+    } finally {
+      global.Proxy = Proxy
+    }
   })
 })
