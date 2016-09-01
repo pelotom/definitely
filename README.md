@@ -2,8 +2,9 @@
 Find `undefined` property bugs close to the source.
 
 ### Installation
-
+```
 $ npm install --save-dev definitely
+```
 
 ### Usage and rationale
 JavaScript allows you to access nonexistent properties on an object and simply evaluates the expression to `undefined`. Usually when this happens it's a bug, but since no error is thrown such bugs can be a difficult to debug as the problem tends to rear its ugly head far from whence it came. For example,
