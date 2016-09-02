@@ -1,6 +1,6 @@
 {
   "name": "definitely",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Disallow undefined property access in JavaScript",
   "main": "definitely.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "url": "https://github.com/pelotom/definitely/issues"
   },
   "homepage": "https://github.com/pelotom/definitely#readme",
-  "engines" : {
-    "node" : ">=6.0.0"
+  "engines": {
+    "node": ">=6.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.14.0",
