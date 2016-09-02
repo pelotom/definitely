@@ -5,12 +5,23 @@ export default (
   } = {}
 ) => {
 
-  const whiteset = {}
-  for (let i = 0; i < whitelist.length; i++)
-    whiteset[whitelist[i]] = null
+  if (obj === null)
+    return obj
+
+  switch (typeof obj) {
+    case 'undefined':
+    case 'boolean':
+    case 'number':
+    case 'string':
+      return obj
+  }
 
   if (typeof Proxy === 'undefined')
     return obj
+
+  const whiteset = {}
+  for (let i = 0; i < whitelist.length; i++)
+    whiteset[whitelist[i]] = null
 
   return new Proxy(obj, {
     get(target, key) {

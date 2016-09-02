@@ -31,6 +31,14 @@ describe('definitely', () => {
     const key = 'blip'
     expect(definitely(obj, { whitelist: [key] })[key]).to.equal(undefined)
   })
+
+  it('doesn\'t blow up on primitives', () => {
+    definitely(null)
+    definitely(undefined)
+    definitely(false)
+    definitely(3)
+    definitely('hi')
+  })
 })
 
 describe('definitely without Proxy', () => {
