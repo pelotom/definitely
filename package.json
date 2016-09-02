@@ -5,8 +5,8 @@
   "main": "definitely.js",
   "scripts": {
     "build": "babel --minified -o definitely.js src/definitely.js",
-    "test": "mocha --reporter progress --compilers js:babel-core/register src/*.test.js",
-    "test:watch": "npm run test -- --watch",
+    "test": "mocha --compilers js:babel-core/register src/*.test.js",
+    "test:watch": "npm run test -- --watch --reporter progress",
     "release": "xyz",
     "release:patch": "xyz --increment patch",
     "release:minor": "xyz --increment minor",
